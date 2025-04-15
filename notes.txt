@@ -1,0 +1,10 @@
+Rentrer Notes
+Bouton Supprimer
+Valider les tâches
+Indiquer combien de tâches faites
+Tri des tâches
+Rechercher de tâches
+Enregistrer les Dates
+Dale Limite
+Choisir un code couleur
+Save les Notes en JSON ou en TXT pour pouvoir les importer. Si possible faire un Hash pour la Sécurité des données. 

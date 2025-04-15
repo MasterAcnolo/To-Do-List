@@ -7,16 +7,28 @@
 
   <link rel="stylesheet" href="styles.css">
   <script src="script.js"></script>
+
 </head>
 <body>
 
   <div class="Input">
-    <input type="text" placeholder="Insert Text Here...">
-    <button type="button"> +</button>
+
+    <input type="text" id="text-input" placeholder="Insert Text Here...">
+    <div class="highlight"></div>
+
+    <button type="button" id="BoutonAdd" onclick="getText()">+</button>
+
   </div>
 
+  
+
+
+
   <div class="output">
-    <p id="text-output"></p>
+
+    <ul id="list-output"></ul>
+
   </div>
+
 </body>
 </html>
