@@ -2,32 +2,49 @@ function getText() {
   const input = document.getElementById('text-input');
   const text = input.value.trim();
   const ul = document.getElementById('list-output');
+  const Todo = [];
+  if (text === "") return;
+
   const li = document.createElement("li");
 
-  if (text === "") return; // On s'en fout si y'a rien
+  // Créer un nœud texte avec le contenu de la tâche
+  const taskText = document.createElement("span");
+  taskText.classList.add("task-text"); // On ajoute la classe `task-text` pour appliquer le style de barré si besoin
+  taskText.textContent = text;
 
-  li.textContent = text;
-  input.value = ""; // Clear du champ après ajout
-
-  // Créer le bouton de delete
+  // Créer le bouton de suppression
   const removeButton = document.createElement("span");
-  removeButton.textContent = " X"; // Contenu du bouton de delete
+  removeButton.textContent = "X";
   removeButton.classList.add("remove");
 
-  // Ajouter la croix (removeButton) au <li>
+  // Ajouter le texte puis le bouton
+  li.appendChild(taskText);
   li.appendChild(removeButton);
 
   // Ajouter le <li> à la liste
   ul.appendChild(li);
+  input.value = "";
 
-  // Ajouter un écouteur d'événements pour cocher/décocher la tâche
+  
+  // Cocher/décocher la tâche (applique/désapplique le barré)
   li.addEventListener("click", function () {
-    li.classList.toggle("done"); // Alterne entre .done et rien
+    li.classList.toggle("done");
   });
 
-  // Ajouter un écouteur d'événements pour supprimer la tâche
+  // Supprimer la tâche
   removeButton.addEventListener("click", function (event) {
-    event.stopPropagation(); // Empêche la propagation du clic sur le <li>
-    li.remove(); // Supprimer le <li> de la liste
+    event.stopPropagation(); // Empêche de cocher/décocher quand on clique sur le X
+    li.remove();
   });
 }
+
+
+// Ajouter avec la touche Entrée
+document.getElementById("text-input").addEventListener("keydown", function (event) {
+  if (event.key === "Enter") {
+    getText();
+  }
+});
+
+// Ajouter avec le bouton "+"
+document.getElementById("BoutonAdd").addEventListener("click", getText);
