@@ -7,26 +7,26 @@ function getText() {
 
   const li = document.createElement("li");
 
-  // Créer un nœud texte avec le contenu de la tâche
+  
   const taskText = document.createElement("span");
-  taskText.classList.add("task-text"); // On ajoute la classe `task-text` pour appliquer le style de barré si besoin
+  taskText.classList.add("task-text"); 
   taskText.textContent = text;
 
-  // Créer le bouton de suppression
+  
   const removeButton = document.createElement("span");
   removeButton.textContent = "X";
   removeButton.classList.add("remove");
 
-  // Ajouter le texte puis le bouton
+ 
   li.appendChild(taskText);
   li.appendChild(removeButton);
 
-  // Ajouter le <li> à la liste
+ 
   ul.appendChild(li);
   input.value = "";
 
   
-  // Cocher/décocher la tâche (applique/désapplique le barré)
+  
   li.addEventListener("click", function () {
     li.classList.toggle("done");
   });

@@ -1,7 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
+html{
+
+  background: url("background2.jpg") ;
+}
 body {
-  background: url("background.jpeg");
+  
   background-size: cover;
   background-repeat: space;
   font-size: 200%;
