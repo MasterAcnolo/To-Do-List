@@ -1,0 +1,7 @@
+*{
+    margin: 0;
+    padding: 0;
+    display: block;
+    scroll-behavior: smooth;
+    /* outline: solid red 2px; */
+}
