@@ -1,27 +1,6 @@
 *{
     margin: 0;
     padding: 0;
-    display: block;
     scroll-behavior: smooth;
     /* outline: solid red 2px; */
 }
-
-li {
-    display: flex;
-    align-items: center;
-    margin: 5px 0;
-  }
-
-  input[type="checkbox"] {
-    margin-right: 10px;
-    outline: none;
-     box-shadow: none;
-  }
-
-  button {
-    cursor: pointer;
-  }
-
-  span {
-    flex: 1;
-  }
